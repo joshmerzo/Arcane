@@ -16,8 +16,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navbar styles */
-/* Navbar styles */
 nav {
     font-family: 'Arcane Nine', sans-serif;
     width: 75%; /* Set width */
@@ -97,6 +95,7 @@ nav {
     color: #007bff;
 }
 
+
 /* Banner styles */
 .banner {
     width: 100%;
@@ -125,7 +124,7 @@ nav {
 
 .emphasized-title {
     font-family: 'Arcane Nine', sans-serif;
-    font-size: 12rem;
+    font-size: 13rem;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
     letter-spacing: 2px;

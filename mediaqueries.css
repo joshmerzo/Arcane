@@ -5,13 +5,15 @@
     }
 
     .navbar-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #f8f9fa;
-        width: 100%;
+        display: none; /* Hide the navbar by default on mobile */
+        flex-direction: column; /* Stack the items vertically */
+        width: 100%; /* Make it full-width */
+        background-color: rgba(0, 0, 0, 0.75); /* Add some transparency */
         position: absolute;
-        top: 60px;
-        left: 0;
+        top: 80px; /* Position below the navbar */
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
     }
 
     .navbar-menu.active {
@@ -19,7 +21,19 @@
     }
 
     .navbar-nav {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        flex-direction: column; /* Stack the nav items vertically */
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .emphasized-title {
+        font-size: 3rem;
+    }
+
+    .navbar-menu.show {
+        display: flex; /* Show the navbar when toggled */
     }
 }
