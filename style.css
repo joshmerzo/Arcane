@@ -17,20 +17,61 @@ body {
 }
 
 /* Navbar styles */
+/* Navbar styles */
 nav {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Make it visible over the banner */
+    font-family: 'Arcane Nine', sans-serif;
+    width: 75%; /* Set width */
+    padding: 15px 20px; /* Increase top/bottom padding */
     position: fixed; /* Keep it at the top */
-    top: 0;
+    top: 20px; /* Add some space from the top */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent; /* Ensure transparent background */
     z-index: 1000; /* Ensure it appears above the banner */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+.navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it stays above the navbar links */
+}
+
+.hamburger {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
+
+/* Center the navbar links */
 .navbar-menu {
     display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .navbar-nav {
@@ -40,6 +81,7 @@ nav {
 }
 
 .nav-item .nav-link {
+    text-align: center;
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
