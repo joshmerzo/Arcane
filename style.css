@@ -5,7 +5,9 @@
     font-weight: normal;
     font-style: normal;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -67,6 +69,7 @@ nav {
 
 /* Center the navbar links */
 .navbar-menu {
+
     display: flex;
     justify-content: center;
     flex-grow: 1;
@@ -82,7 +85,7 @@ nav {
     text-align: center;
     text-decoration: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.25rem;
     transition: color 0.3s;
 }
 
@@ -100,15 +103,13 @@ nav {
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.76)), 
-        url('https://images.hdqwalls.com/download/jinx-and-vi-league-of-legends-in-arcane-4k-i7-2560x1080.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     text-align: center;
     color: #fff;
     padding-top: 60px; /* Adjust for the fixed navbar height */
@@ -130,3 +131,16 @@ nav {
     letter-spacing: 2px;
 }
 
+.scroll-down-arrow {
+    font-size: 2rem; /* Size of the arrow */
+    margin-top: 20px; /* Space between the title and the arrow */
+    color: #fff; /* White arrow color */
+    cursor: pointer;
+    animation: bounce 1s infinite;
+    padding-top: 3cm;
+}
+
+#Home {
+    background-image: linear-gradient(rgba(27, 27, 27, 0.75), rgba(0, 0, 0, 0.75)),
+        url('https://images.hdqwalls.com/download/jinx-and-vi-league-of-legends-in-arcane-4k-i7-2560x1080.jpg');
+}
