@@ -31,7 +31,9 @@
         <div class="center-text">
             <p class="subtitle" id="home-subtitle">Explore the World of</p>
             <h1 class="emphasized-title"  id="home-title">Arcane</h1>
-
+            <div class="center-text">
+                <a href="#EpisodeID"><i class="fas fa-chevron-down scroll-down-arrow" id="scroll-arrow"></i></a>
+            </div>
         </div>
     </div>
 
@@ -39,10 +41,6 @@
     <div class="Episode" id="EpisodeID">
         <h1 class="epHeader" id="epHeader">Episodes</h1>
         <div class="epContainer">
-            <div class="center-text">
-                <a href="#about"><i class="fas fa-chevron-down scroll-down-arrow" id="scroll-arrow"></i></a>
-    
-            </div>
             <div class="mediaNtext">
                 <div class="epTnD fade-content">
                     <h2 class="ep" id="ep">Season 1, Episode 01:</h2>
@@ -56,13 +54,15 @@
                     </p>
                 </div>
             </div>
+            <div class="center-text">
+                <a href="#Characters"><i class="fas fa-chevron-down scroll-down-arrow" id="scroll-arrow"></i></a>
+            </div>
         </div>
         <button id="switchSeasonBtn" class="switchSeasonBtn">Switch Season</button>
         <button id="nextEpisodeBtn" class="nextEpisodeBtn">Next Episode</button>
     </div>
 
     <div class="slider" id="Characters">
-        <!-- list Items -->
         <div class="list">
             <div class="item active">
                 <img src="pics/jinx.jpg">
@@ -215,11 +215,10 @@
 
     <div id="Regions" class="banner">
         <div class="map-container">
+            <h1 class="epHeader" id="epHeader">Map</h1>
             <!-- Map Border with Fixed Dimensions -->
             <div class="map-border">
                 <img src="pics/map.jpg" alt="Map of Runeterra" class="map-image">
-                
-                <!-- Interactive Circles for Regions -->
                 <div class="interactive-circle noxus" style="top: 110px; left: 190px;" data-region="Noxus"></div>
                 <div class="interactive-circle zaun" style="top: 365px; left: 490px;" data-region="Zaun"></div>
                 <div class="interactive-circle piltover" style="top: 340px; left: 480px;" data-region="Piltover"></div>
@@ -230,14 +229,12 @@
                     <p id="regionDescription"></p>
                     <h4>Key Characters</h4>
                     <ul id="regionCharacters">
-                        <!-- Characters will be inserted here dynamically -->
                     </ul>
                 </div>                
             </div>
         </div>
         
     </div>
-    
 
     <script src="script.js"></script>
 </body>
