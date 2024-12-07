@@ -81,3 +81,63 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     })
 })
+
+
+// Get all interactive circles
+const circles = document.querySelectorAll('.interactive-circle');
+
+// Get the region info section
+const regionInfo = document.getElementById('regionInfo');
+const regionTitle = document.getElementById('regionTitle');
+const regionDescription = document.getElementById('regionDescription');
+
+// Region data for each area
+const regionData = {
+    'Noxus': {
+        title: 'Noxus',
+        description: 'Noxus is a militaristic and expansionist empire, known for its ruthless tactics and the power of its ruling class. The people here are driven by ambition and strength, often willing to do anything to achieve power and dominance.',
+        characters: [
+            'Mel', ' Ambessa',
+        ],
+    },
+    'Zaun': {
+        title: 'Zaun',
+        description: 'Zaun is depicted as a place of invention and struggle, where the poor and downtrodden live amidst dangerous chemicals and oppressive corporations. The region is dominated by underground gangs and brilliant yet often morally gray inventors. ',
+        characters: [
+            'Jinx', ' Vi', ' Viktor', ' Silco', ' Vander', ' Singed'
+        ],
+    },
+    'Piltover': {
+        title: 'Piltover',
+        description: 'Piltover is  as a center for progress, prosperity, and scientific advancement. The city’s shining towers and sophisticated society mask its political intrigue and growing tension with Zaun. ',
+        characters: [
+            'Caitlyn', ' Jayce', ' Heimerdinger', 
+        ],
+    }
+};
+
+// Show region info when circle is clicked
+function showRegionInfo(region) {
+    const data = regionData[region];
+    regionTitle.textContent = data.title;
+    regionDescription.textContent = data.description;
+    regionCharacters.textContent = data.characters;
+
+    // Show the region info section
+    regionInfo.classList.remove('hidden');
+}
+
+// Add click event listeners to all circles
+circles.forEach(circle => {
+    circle.addEventListener('click', function() {
+        const region = circle.getAttribute('data-region');
+        showRegionInfo(region);
+    });
+});
+
+// Close region info if clicked outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.interactive-circle') && !event.target.closest('#regionInfo')) {
+        regionInfo.classList.add('hidden');
+    }
+});
