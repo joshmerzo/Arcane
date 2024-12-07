@@ -38,3 +38,446 @@
     }
 }
 
+@media screen and (max-width: 678px) {
+    .thumbnail {
+        justify-content: start;
+    }
+    .slider .list .item .content h2 {
+        font-size: 60px;
+    }
+    .arrows {
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 90%; /* Adjust navbar width */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .navbar-menu {
+        display: none; /* Hide menu on small screens */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px;
+    }
+
+    .navbar-toggler {
+        display: block; /* Show hamburger button */
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 3px;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        width: 30px;
+        height: 3px;
+        top: -9px;
+    }
+
+    .banner {
+        padding-top: 80px; /* Adjust for the navbar on smaller screens */
+    }
+
+    .subtitle {
+        font-size: 1.5rem; /* Smaller font size for subtitle */
+    }
+
+    .emphasized-title {
+        font-size: 8rem; /* Reduce font size for title */
+    }
+
+    .scroll-down-arrow {
+        font-size: 1.5rem; /* Adjust arrow size */
+        margin-top: 15px; /* Adjust spacing */
+    }
+
+    .characterHeader {
+        font-size: 3rem; /* Reduce font size for character header */
+        left: 20px; /* Adjust position */
+        top: 70px; /* Adjust position */
+    }
+
+    .epHeader {
+        font-size: 2rem; /* Smaller font size for episode header */
+    }
+
+    .epTnD {
+        bottom: 120px; /* Adjust positioning */
+        left: 40px; /* Adjust positioning */
+    }
+
+    .ep {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .epTitle {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .epDescription {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .episode-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .episode-buttons button {
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    .switchSeasonBtn {
+        bottom: 60px; /* Adjust position */
+        right: 10px; /* Adjust position */
+    }
+
+    .arrowBtns {
+        bottom: 10px; /* Adjust position */
+        gap: 15px;
+    }
+
+    .arrowBtn {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 8px 20px; /* Adjust padding */
+    }
+
+    .slider .list .item .content {
+        width: 80%; /* Adjust width */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 85%; /* Adjust navbar width */
+        padding: 12px 18px; /* Adjust padding */
+    }
+
+    .banner {
+        padding-top: 100px; /* Adjust padding */
+    }
+
+    .subtitle {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .emphasized-title {
+        font-size: 10rem; /* Adjust font size */
+    }
+
+    .scroll-down-arrow {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .characterHeader {
+        font-size: 4rem; /* Adjust font size */
+        left: 300px; /* Adjust position */
+    }
+
+    .epHeader {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .epTnD {
+        bottom: 130px; /* Adjust position */
+        left: 60px; /* Adjust position */
+    }
+
+    .ep {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .epTitle {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .epDescription {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .episode-buttons {
+        gap: 8px;
+    }
+
+    .episode-buttons button {
+        padding: 9px 14px; /* Adjust button padding */
+    }
+
+    .switchSeasonBtn {
+        bottom: 70px; /* Adjust position */
+        right: 15px; /* Adjust position */
+    }
+
+    .arrowBtns {
+        bottom: 15px; /* Adjust position */
+    }
+
+    .arrowBtn {
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
+@media screen and (max-width: 678px) {
+    /* Slider adjustments */
+
+    .slider .list .item .content h2 {
+        font-size: 40px; /* Smaller font size for the title */
+        max-width: 90%; /* Ensure the content doesn't overflow */
+        left: 5%; /* Adjust the position */
+        top: 15%; /* Adjust the top position */
+    }
+
+    .slider .list .item .content p:nth-child(1) {
+        font-size: 12px; /* Reduce text size */
+        letter-spacing: 2px; /* Adjust letter spacing */
+    }
+
+    .thumbnail {
+        flex-wrap: nowrap; /* Ensure thumbnails don't wrap */
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    .thumbnail .item {
+        width: 120px; /* Reduce size of thumbnail items */
+        height: 180px;
+    }
+
+    /* Arrows */
+    .arrows {
+        top: 10%; /* Adjust arrows to be more accessible */
+        right: 10px; /* Align arrows to the right */
+    }
+
+    .arrows button {
+        width: 35px; /* Smaller arrow buttons */
+        height: 35px;
+    }
+
+    /* Map container and elements */
+    .map-container {
+        width: 100%;
+        padding: 10px; /* Add some padding */
+    }
+
+    .map-border {
+        width: 100%;
+        height: 300px; /* Reduce the size for smaller screens */
+    }
+
+    .interactive-circle {
+        width: 15px; /* Smaller circle size */
+        height: 15px;
+    }
+
+    .region-info {
+        width: 80%; /* Make the region info box more responsive */
+        max-height: 300px; /* Adjust max height for better readability */
+    }
+
+    .region-info h3 {
+        font-size: 1.4rem; /* Reduce title size */
+    }
+
+    .region-info p,
+    .region-info ul li {
+        font-size: 0.9rem; /* Reduce text size for better readability */
+    }
+
+    .region-info ul {
+        text-align: left; /* Align list to the left */
+    }
+}
+
+/* For small screen devices (phones) */
+@media screen and (max-width: 768px) {
+
+    /* Banner styling */
+    .banner {
+        padding-top: 50px; /* Adjust padding for mobile */
+    }
+
+    .subtitle {
+        font-size: 4vw; /* Smaller font size */
+        margin-bottom: 0.5rem;
+    }
+
+    .emphasized-title {
+        font-size: 12vw; /* Adjust title size */
+    }
+
+    .scroll-down-arrow {
+        font-size: 1.5rem; /* Adjust arrow size */
+        margin-top: 1rem;
+    }
+
+    /* Character Header */
+    .characterHeader {
+        font-size: 4rem; /* Adjust character header size */
+        left: 5vw; /* Adjust position */
+        top: 10vh;
+    }
+
+    /* Episode Styles */
+    .Episode {
+        height: auto; /* Let height adjust automatically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .epHeader {
+        font-size: 2.5rem; /* Adjust episode header size */
+    }
+
+    .epContainer {
+        padding: 5vw 5vw; /* Adjust padding */
+    }
+
+    .epTnD {
+        left: 5vw;
+        bottom: 15vh; /* Adjust position */
+        max-width: 70vw; /* Adjust width */
+    }
+
+    .ep {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+
+    .epTitle {
+        font-size: 1.8rem; /* Adjust title size */
+    }
+
+    .epDescription {
+        font-size: 0.9rem; /* Adjust description font size */
+        max-width: 90%; /* Make description more responsive */
+    }
+
+    .episode-buttons button {
+        padding: 1.2rem 2vw; /* Adjust button size */
+        font-size: 1.3rem; /* Adjust font size */
+    }
+
+    .switchSeasonBtn {
+        font-size: 1rem;
+        padding: 1.5rem;
+        right: 2vw;
+        bottom: 5vw;
+    }
+
+    .arrowBtns {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .arrowBtn {
+        font-size: 0.9rem; /* Adjust arrow button size */
+        padding: 0.5rem 1rem; /* Adjust padding */
+    }
+
+    #backgroundContainer {
+        background-image: url('epImg/ep/1.png');
+        background-position: top center; /* Adjust background positioning */
+        background-size: cover;
+    }
+
+}
+
+/* For extra small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+
+    .banner {
+        padding-top: 40px; /* Further reduce padding */
+            }
+
+    .subtitle {
+        font-size: 5vw; /* Reduce subtitle font size */
+    }
+
+    .emphasized-title {
+        font-size: 14vw; /* Reduce emphasized title size */
+    }
+
+    .episode-buttons button {
+        padding: 1rem 2vw; /* Adjust padding for smaller screens */
+        font-size: 1.2rem; /* Adjust font size */
+        width: auto; /* Ensure buttons do not stretch */
+    }
+    .scroll-down-arrow {
+        font-size: 1.2rem; /* Adjust arrow size */
+        margin-top: 1rem;
+    }
+
+    .characterHeader {
+        font-size: 3rem; /* Adjust character header font size */
+        left: 3vw; /* Adjust left position */
+        top: 12vh;
+    }
+
+    .Episode {
+        height: auto; /* Let height adjust automatically */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .epHeader {
+        font-size: 2rem; /* Adjust episode header size */
+    }
+
+    .epContainer {
+        padding: 5vw 5vw; /* Adjust padding */
+    }
+
+    .epTnD {
+        left: 3vw; /* Adjust positioning */
+        bottom: 12vh; /* Adjust bottom distance */
+        max-width: 75vw; /* Adjust max width */
+    }
+
+    .ep {
+        font-size: 1rem; /* Smaller text size */
+    }
+
+    .epTitle {
+        font-size: 1.6rem; /* Smaller title size */
+    }
+
+    .epDescription {
+        font-size: 0.85rem; /* Smaller description size */
+        max-width: 90%; /* Adjust width */
+    }
+
+    .episode-buttons button {
+        padding: 1rem 2vw; /* Adjust button size */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .switchSeasonBtn {
+        font-size: 0.9rem;
+        padding: 1rem;
+        right: 2vw;
+        bottom: 4vw;
+    }
+
+    .arrowBtns {
+        bottom: 0.8rem;
+        right: 1rem;
+    }
+
+    .arrowBtn {
+        font-size: 0.8rem; /* Adjust size */
+        padding: 0.4rem 1rem; /* Adjust padding */
+    }
+
+    #backgroundContainer {
+        background-image: url('epImg/ep/1.png');
+        background-position: top center; /* Adjust background positioning */
+        background-size: cover;
+    }
+}
+
