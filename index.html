@@ -37,15 +37,15 @@
         </div>
     </div>
 
-
     <div class="Episode" id="EpisodeID">
+        <div id="backgroundContainer"></div>
         <h1 class="epHeader" id="epHeader">Episodes</h1>
         <div class="epContainer">
             <div class="mediaNtext">
-                <div class="epTnD fade-content">
-                    <h2 class="ep" id="ep">Season 1, Episode 01:</h2>
-                    <h2 class="epTitle" id="epTitle">Welcome to the Playground</h2>
-                    <p class="epDescription" id="epDescription">
+                <div class="epTnD ">
+                    <h2 class="ep fade-content" id="ep">Season 1, Episode 01:</h2>
+                    <h2 class="epTitle fade-content" id="epTitle">Welcome to the Playground</h2>
+                    <p class="epDescription fade-content" id="epDescription">
                         Following a struggle on the Bridge of Progress, the Zaunite sisters Vi and Powder discover their
                         parents dead. Vander, the leader of the failed rebellion, takes them in. Years later, a Piltover
                         penthouse is broken into by Vi, Powder, and their adopted brothers, Mylo and Claggor. After
@@ -58,9 +58,16 @@
                 <a href="#Characters"><i class="fas fa-chevron-down scroll-down-arrow" id="scroll-arrow"></i></a>
             </div>
         </div>
+
+        <div id="episodeButtons" class="episode-buttons"></div>
+
         <button id="switchSeasonBtn" class="switchSeasonBtn">Switch Season</button>
-        <button id="nextEpisodeBtn" class="nextEpisodeBtn">Next Episode</button>
+        <div class="arrowBtns">
+            <button id="prevEpisodeBtn" class="arrowBtn"><</button>
+            <button id="nextEpisodeBtn" class="arrowBtn">></button>
+        </div>
     </div>
+    
 
     <div class="slider" id="Characters">
         <div class="list">

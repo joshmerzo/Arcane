@@ -151,27 +151,6 @@ nav {
 }
 /* end home */
 
-.Episode {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: block; /* Block layout to stack elements */
-    padding: 20px; /* Space between content and edges */
-}
-
-.epHeader {
-    font-family: 'Arcane Nine', sans-serif;
-    font-size: 4rem;
-    background: linear-gradient(90deg, #c8a77a, #d1b48b, #e3d4b8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin: 0; /* Remove default margins */
-    padding-bottom: 0.5rem; /* Space between the header and container */
-}
-
 .characterHeader {
     font-family: 'Arcane Nine', sans-serif;
     font-size: 5rem;
@@ -185,6 +164,29 @@ nav {
     left: 1000px;
     top: 90px;
     z-index: 20; /* Higher than the slider's z-index */
+}
+
+/* episodeCSS */
+
+.Episode {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: block; /* Block layout to stack elements */
+    padding: 20px; /* Space between content and edges */
+}
+
+.epHeader {
+    font-family: 'Arcane Nine', sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #c8a77a, #d1b48b, #e3d4b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Remove default margins */
+    padding-bottom: 0.5rem; /* Space between the header and container */
 }
 
 .epContainer {
@@ -213,7 +215,7 @@ nav {
 .epTitle {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-family: 'Arcane Nine', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     background: linear-gradient(90deg, #c8a77a, #d1b48b, #e3d4b8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -224,12 +226,36 @@ nav {
 .epDescription {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-family: 'Gilgan', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
     margin: 0; /* Remove extra spacing */
     line-height: 1.5; /* Improve readability */
-    max-width: 500px; /* Keep a consistent width */
+    max-width: 450px; /* Keep a consistent width */
 }
+
+.episode-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Button styles */
+.episode-buttons button {
+    background-color: #444;
+    opacity: 70%;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.episode-buttons button:hover {
+    background-color: #666;
+}
+
 
 .switchSeasonBtn {
     position: absolute; /* Allows precise placement */
@@ -253,10 +279,16 @@ nav {
     background-color: rgba(209, 180, 139, 1);
 }
 
-.nextEpisodeBtn {
+.arrowBtns{
+    display: flex;
     position: absolute; /* Allows precise placement */
     bottom: 20px; /* Fixed distance from the bottom */
     right: 20px; /* Fixed distance from the right */
+    gap: 22px;
+    opacity: 70%;
+}
+
+.arrowBtn {
     padding: 10px 25px;
     font-size: 1rem;
     font-family: 'Arcane Nine', sans-serif;
@@ -268,22 +300,24 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-.nextEpisodeBtn:hover {
+.arrowBtn:hover {
     background-color: rgba(209, 180, 139, 1);
 }
 
-#EpisodeID {
-    background-color: #000;
-    background-image: 
-        radial-gradient(circle at 60% 40%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 100%),
-        url('epImg/ep/1.png'); 
-    background-size: cover;
-    background-position: center;
-    position: relative;
+#backgroundContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
+    background-image: 
+        radial-gradient(circle at 60% 40%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 100%),
+        url('epImg/ep/1.png');
+    background-size: cover;
+    background-position: center;
     transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
-    opacity: 1; /* Fully visible */
+    opacity: 1;
+    z-index: -1; /* Place it behind the content */
 }
 
 /* specifically for the episode title and description */
@@ -293,10 +327,13 @@ nav {
 }
 
 /* end episode */
+
+
 #Regions {
     background-image: linear-gradient(rgba(27, 27, 27, 0.75), rgba(0, 0, 0, 0.75)),
         url("pics/map.jpg");
 }
+
 
 .slider{
     height: 100vh;

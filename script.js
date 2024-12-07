@@ -81,7 +81,8 @@ thumbnails.forEach((thumbnail, index) => {
 })
   // Episodes jscript
 
-const allEpisodes = [
+
+  const allEpisodes = [
     {
         season: 1,
         ep: "Season 1, Episode 01:",
@@ -143,7 +144,7 @@ const allEpisodes = [
         description: "Vi and Caitlyn find an unexpected ally in Ekko, a childhood friend now leading the Firelights, a rebel group opposing Silco. Jinx confronts her fractured psyche, haunted by memories of her sister and their past. A climactic battle ensues between the Firelights and Silco’s forces, leading to harrowing revelations.",
         background: "epImg/ep/7.png",
         gradient: "radial-gradient(circle at 10% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { top: "30%", left: "5%" }
+        position: { top: "0%", left: "50%" }
     },
     {
         season: 1,
@@ -224,7 +225,7 @@ const allEpisodes = [
         description: "A moment of darkness, a moment of light — and a vision of What Could Have Been.",
         background: "epImg/ep2/7.png",
         gradient: "radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { bottom: "10%", right: "20%" }
+        position: { top: "10%", left: "20%" }
     },
     {
         season: 2,
@@ -233,7 +234,7 @@ const allEpisodes = [
         description: "A brewing storm fuels a series of startling transformations. Elsewhere, the spark of rebellion still burns.",
         background: "epImg/ep2/8.png",
         gradient: "radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { bottom: "10%", right: "20%" }
+        position: { top: "5%", left: "20%" }
     },
     {
         season: 2,
@@ -242,7 +243,7 @@ const allEpisodes = [
         description: "Magic. Science. Power. Revenge. Destinies clash in an epic final chapter, igniting an all-out war.",
         background: "epImg/ep2/9.png",
         gradient: "radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { bottom: "10%", right: "20%" }
+        position: { top: "20%", left: "17%" }
     },
     
 
@@ -252,8 +253,37 @@ let currentSeason = 1; // Default season
 let episodes = allEpisodes.filter(e => e.season === currentSeason); // Filter by season
 let currentEpisode = 0;
 
+function createEpisodeNavigationButtons() {
+    const buttonContainer = document.getElementById("episodeButtons");
+    buttonContainer.innerHTML = ""; // Clear previous buttons
+
+    episodes.forEach((episode, index) => {
+        const button = document.createElement("button");
+        button.textContent = index + 1; // Display episode number (1-9)
+        button.classList.add('navButton');
+        
+        button.addEventListener("click", () => {
+            currentEpisode = index; // Set the current episode to the clicked button index
+            updateEpisodeUI(episode); // Update the content with the clicked episode
+            updateBackground(episode); // Update the background for the clicked episode
+        });
+        
+        buttonContainer.appendChild(button);
+    });
+}
+
+function initializeEpisodeNavigation() {
+    const episodeData = episodes[currentEpisode];
+    updateEpisodeUI(episodeData);
+    updateBackground(episodeData);
+    createEpisodeNavigationButtons();
+}
+
+initializeEpisodeNavigation();
+
+
 function updateBackground(episodeData) {
-    const episodeElement = document.getElementById("EpisodeID");
+    const episodeElement = document.getElementById("backgroundContainer");
 
     // Start fade-out
     episodeElement.style.opacity = 0;
@@ -318,9 +348,7 @@ document.getElementById("switchSeasonBtn").addEventListener("click", () => {
     episodes = allEpisodes.filter(e => e.season === currentSeason); // Filter episodes
     currentEpisode = 0; // Reset to the first episode
 
-    const episodeData = episodes[currentEpisode];
-    updateEpisodeUI(episodeData);
-    updateBackground(episodeData);
+    initializeEpisodeNavigation();
 });
 
 // Next Episode Button
@@ -332,6 +360,17 @@ document.getElementById("nextEpisodeBtn").addEventListener("click", () => {
     updateBackground(episodeData);
 });
 
+// Previous Episode Button
+document.getElementById("prevEpisodeBtn").addEventListener("click", () => {
+    
+    currentEpisode = (currentEpisode - 1) % episodes.length;
+    if (currentEpisode <1){
+        currentEpisode = 8
+    }
+    const episodeData = episodes[currentEpisode];
+    updateEpisodeUI(episodeData);
+    updateBackground(episodeData);
+});
 
 // End episodes
 
