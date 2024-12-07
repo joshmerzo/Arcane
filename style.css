@@ -92,12 +92,12 @@ nav {
 }
 
 .nav-item .nav-link:hover {
-    color: #007bff;
+    color: #ebf5ff;
 }
 
 .nav-item .nav-link.active {
     font-weight: bold;
-    color: #007bff;
+    color: #ebf5ff;
 }
 
 
