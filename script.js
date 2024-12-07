@@ -13,8 +13,6 @@ document.getElementById("scroll-arrow").addEventListener("click", function() {
     document.getElementById("home-title").style.display = "none";
     document.getElementById("home-subtitle").style.display = "none";
     
-    // Reveal the About section
-    document.getElementById("About").style.display = "flex";  // Use 'flex' to display it properly
     
     // Optionally hide the scroll-down arrow
     document.getElementById("scroll-arrow").style.display = "none";
@@ -81,8 +79,7 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     })
 })
-
-// Episodes jscript
+  // Episodes jscript
 
 const allEpisodes = [
     {
@@ -338,6 +335,7 @@ document.getElementById("nextEpisodeBtn").addEventListener("click", () => {
 
 // End episodes
 
+  
 
 // Get all interactive circles
 const circles = document.querySelectorAll('.interactive-circle');
@@ -360,14 +358,14 @@ const regionData = {
         title: 'Zaun',
         description: 'Zaun is depicted as a place of invention and struggle, where the poor and downtrodden live amidst dangerous chemicals and oppressive corporations. The region is dominated by underground gangs and brilliant yet often morally gray inventors. ',
         characters: [
-            'Jinx', ' Vi', ' Viktor', ' Silco', ' Vander', ' Singed'
+            'Jinx ', ' Vi ', ' Viktor', ' Silco', ' Vander', ' Singed'
         ],
     },
     'Piltover': {
         title: 'Piltover',
-        description: 'Piltover is  as a center for progress, prosperity, and scientific advancement. The city’s shining towers and sophisticated society mask its political intrigue and growing tension with Zaun. ',
+        description: 'Piltover is portrayed as a center for progress, prosperity, and scientific advancement. The city’s shining towers and sophisticated society mask its political intrigue and growing tension with Zaun. Piltover is home to ambitious figures like Jayce, Caitlyn, and Heimerdinger, who strive for peace and progress, though often at the cost of others.',
         characters: [
-            'Caitlyn', ' Jayce', ' Heimerdinger', 
+            'Caitlyn ', ' Jayce ', ' Heimerdinger', 
         ],
     }
 };

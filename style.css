@@ -173,6 +173,21 @@ nav {
     padding-bottom: 0.5rem; /* Space between the header and container */
 }
 
+.characterHeader {
+    font-family: 'Arcane Nine', sans-serif;
+    font-size: 5rem;
+    background: linear-gradient(90deg, #c8a77a, #d1b48b, #e3d4b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Remove default margins */
+    padding-bottom: 0.5rem; /* Space between the header and container */
+    position: absolute;
+    left: 1000px;
+    top: 90px;
+    z-index: 20; /* Higher than the slider's z-index */
+}
+
 .epContainer {
     position: relative; /* Establishes a positioning context */
     height: 80vh; /* Fixed height for the container */
@@ -286,7 +301,6 @@ nav {
 
 .slider{
     height: 100vh;
-
     position: relative;
 }
 .slider .list .item{
