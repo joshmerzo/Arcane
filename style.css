@@ -128,6 +128,10 @@ nav {
 .emphasized-title {
     font-family: 'Arcane Nine', sans-serif;
     font-size: 13rem;
+    background: linear-gradient(90deg, #c8a77a, #d1b48b, #e3d4b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
     letter-spacing: 2px;
@@ -282,7 +286,7 @@ nav {
 
 .slider{
     height: 100vh;
-    margin-top: -50px;
+
     position: relative;
 }
 .slider .list .item{
@@ -313,6 +317,8 @@ nav {
 }
 .title-thumbnail{
     color: black;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .slider .list .item .content{
     position: absolute;
@@ -328,7 +334,7 @@ nav {
 }
 .slider .list .item .content h2{
     color: #fff;
-    font-family: 'Arcane Nine', sans-serif;
+    font-family: 'Arcane Nine', sans-serif; 
     font-size: 100px;
     margin: 0;
 }
