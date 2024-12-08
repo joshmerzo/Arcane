@@ -219,6 +219,7 @@ nav {
     flex-direction: column;
     justify-content: space-between; /* Ensures elements are spaced appropriately */
     padding: 5vw 0; /* Adds spacing around the edges */
+    margin-bottom: -1rem;
 }
 
 .epTnD {
@@ -283,6 +284,7 @@ nav {
     border-radius: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 3em;
 }
 
 .episode-buttons button:hover {

@@ -517,26 +517,27 @@
     .episode-buttons button {
         padding: 0.5rem 1rem; /* Adjust padding */
         font-size: 0.9rem; /* Reduce font size */
-        bottom: 3rem;
+        margin-bottom: 5em;
     }
 
     .switchSeasonBtn {
-        bottom: 1.5rem; /* Adjust spacing for smaller screens */
+        bottom: 2rem; /* Adjust spacing for smaller screens */
         right: 1rem; /* Adjust position for smaller screens */
         font-size: 0.9rem;
         padding: 0.4em 1em;
     }
+
 }
 
 @media (max-width: 480px) {
     .episode-buttons button {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
-        bottom: 5rem;
+                margin-bottom: 3em;
     }
 
     .switchSeasonBtn {
-        bottom: 5rem;
+        bottom: 7rem;
         right: 0.5rem;
         font-size: 0.8rem;
         padding: 0.3em 0.6em;
