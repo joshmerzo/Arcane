@@ -290,6 +290,15 @@ thumbnails.forEach((thumbnail, index) => {
 
 ];
 
+document.addEventListener("DOMContentLoaded", () => {
+    preloadEpisodeImages(allEpisodes, () => {
+        console.log("All episode backgrounds are preloaded.");
+        initializeEpisodeDisplay();
+    });
+
+    console.log("Website is ready to run other scripts.");
+});
+
 function preloadEpisodeImages(episodes, callback) {
     let imagesLoaded = 0;
     const totalImages = episodes.length;
@@ -301,8 +310,7 @@ function preloadEpisodeImages(episodes, callback) {
         img.onload = () => {
             imagesLoaded++;
             if (imagesLoaded === totalImages) {
-                // All images loaded, call the callback
-                callback();
+                callback(); 
             }
         };
 
@@ -310,21 +318,16 @@ function preloadEpisodeImages(episodes, callback) {
             console.error(`Failed to load image: ${episode.background}`);
             imagesLoaded++;
             if (imagesLoaded === totalImages) {
-                callback();
+                callback(); 
             }
         };
     });
 }
 
-
-preloadEpisodeImages(allEpisodes, () => {
-    console.log("All episode backgrounds are preloaded and ready to use.");
-    initializeEpisodeDisplay();
-});
-
 function initializeEpisodeDisplay() {
     console.log("Initializing episodes display...");
 }
+
 
 let currentSeason = 1; 
 let episodes = allEpisodes.filter(e => e.season === currentSeason);
