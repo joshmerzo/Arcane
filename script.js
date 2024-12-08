@@ -22,26 +22,49 @@ const backgrounds = [
 ];
 let currentIndex = 0;
 
+// Array to store preloaded images
 const preloadedImages = [];
+let imagesLoaded = 0;
 
-function preloadImages(urls) {
+// Function to preload images
+function preloadImages(urls, callback) {
     urls.forEach((url) => {
-        const img = new Image(); 
-        img.src = url;          
-        preloadedImages.push(img); 
+        const img = new Image();
+        img.src = url;
+
+        // Increment the counter when the image is loaded
+        img.onload = () => {
+            imagesLoaded++;
+            if (imagesLoaded === urls.length) {
+                // When all images are loaded, invoke the callback
+                callback();
+            }
+        };
+
+        // Handle errors gracefully
+        img.onerror = () => {
+            console.error(`Error loading image: ${url}`);
+            imagesLoaded++;
+            if (imagesLoaded === urls.length) {
+                callback();
+            }
+        };
+
+        preloadedImages.push(img);
     });
 }
 
-preloadImages(backgrounds);
-
+// Function to change the background
 function changeBackground() {
     currentIndex = (currentIndex + 1) % backgrounds.length;
     aboutSection.style.backgroundImage = `url('${preloadedImages[currentIndex].src}')`;
 }
 
-setTimeout(() => {
+// Preload images and start the transition only when all are loaded
+preloadImages(backgrounds, () => {
+    console.log("All images preloaded. Starting background transitions.");
     setInterval(changeBackground, 5000);
-}, 1000); 
+});
 
 document.getElementById("scroll-arrow").addEventListener("click", function() {
 
