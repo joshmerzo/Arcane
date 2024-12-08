@@ -166,6 +166,8 @@ nav {
     cursor: pointer;
     animation: bounce 1s infinite;
     padding-top: 3cm;
+    align-items: center;
+    justify-content: center;
 }
 
 #Home {
@@ -723,6 +725,7 @@ nav {
 }
 
 .region-info p {
+    font-family: "Gilgan", sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     color: #f1faee;
@@ -735,6 +738,7 @@ nav {
 }
 
 .region-info ul {
+    font-family: "Gilgan", sans-serif;
     list-style: none;
     padding-left: 0;
     margin-top: 10px;
@@ -743,6 +747,7 @@ nav {
 }
 
 .region-info ul li {
+    font-family: "Gilgan", sans-serif;
     color: #f1faee;
     font-size: 1rem;
     padding: 5px 0;

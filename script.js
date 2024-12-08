@@ -13,37 +13,8 @@ menu.addEventListener('click', function() {
 
 // Scroll arrow click event
 document.getElementById("scroll-arrow").addEventListener("click", function() {
-    // Hide Home section's title and subtitle
-    document.getElementById("home-title").style.display = "none";
-    document.getElementById("home-subtitle").style.display = "none";
-    
-    
-    // Optionally hide the scroll-down arrow
-    document.getElementById("scroll-arrow").style.display = "none";
+
 });
-
-// START About js
-// Background transition script
-const aboutSection = document.getElementById('About');
-const backgrounds = [
-    'pics/bgAbout/2.png',
-    'pics/bgAbout/3.png',
-    'pics/bgAbout/4.jpg',
-    'pics/bgAbout/5.jpg',
-    'pics/bgAbout/6.jpg',
-    'pics/bgAbout/7.png'
-];
-let currentIndex = 0;
-
-function changeBackground() {
-    currentIndex = (currentIndex + 1) % backgrounds.length;
-    aboutSection.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
-}
-
-// Change background every 5 seconds
-setInterval(changeBackground, 5000);
-
-// end aboutjs
 
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -124,7 +95,7 @@ thumbnails.forEach((thumbnail, index) => {
         description: "As tension rises after the botched heist, Vi and her crew deal with the fallout while Powder grapples with guilt over the disaster. Meanwhile, in Piltover, scientists Viktor and Jayce explore groundbreaking magical technology, Hextech, attempting to harness the stolen crystals' power. Zaun's criminal underworld begins to stir as Silco, a shadowy figure, schemes to assert his dominance.",
         background: "epImg/ep/2.png",
         gradient: "radial-gradient(circle at 10% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { top: "10%", left: "50%" }
+        position: { top: "10%", left: "60%" }
     },
     {
         season: 1,
@@ -133,7 +104,7 @@ thumbnails.forEach((thumbnail, index) => {
         description: "The authorities close in on the gang. Vander faces Silco’s growing threats, forcing him to make difficult decisions to protect Zaun. Vi chooses to confront Silco head-on, leaving Powder behind for her safety. Tragedy strikes as an explosive showdown between Zaunites and Enforcers erupts, with devastating consequences that fracture the sisters' bond forever.",
         background: "epImg/ep/3.png",
         gradient: "radial-gradient(circle at 10% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { top: "20%", left: "5%" }
+        position: { top: "30%", left: "5%" }
     },
     {
         season: 1,
@@ -160,7 +131,7 @@ thumbnails.forEach((thumbnail, index) => {
         description: "Vi and Caitlyn infiltrate Zaun, witnessing the dire conditions its people endure under Silco’s control. Jinx’s insecurities flare as she feels her sister’s presence. Meanwhile, Viktor's research takes a dangerous turn, unlocking Hextech's true potential but at great personal cost. The gap between the two cities grows wider.",
         background: "epImg/ep/6.png",
         gradient: "radial-gradient(circle at 10% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { top: "30%", left: "10%" }
+        position: { top: "45%", left: "10%" }
     },
     {
         season: 1,
@@ -178,7 +149,7 @@ thumbnails.forEach((thumbnail, index) => {
         description: "The fragile alliance between Piltover and Zaun teeters on the edge as Jayce proposes a dangerous deal with Silco to secure peace. Vi and Caitlyn's partnership deepens, but Jinx's instability threatens to derail everything. Viktor’s experiments take a shocking toll, pushing him further into darkness.",
         background: "epImg/ep/8.png",
         gradient: "radial-gradient(circle at 10% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { top: "30%", left: "15%" }
+        position: { top: "45%", left: "15%" }
     },
     {
         season: 1,
@@ -268,7 +239,7 @@ thumbnails.forEach((thumbnail, index) => {
         description: "Magic. Science. Power. Revenge. Destinies clash in an epic final chapter, igniting an all-out war.",
         background: "epImg/ep2/9.png",
         gradient: "radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75) 100%)",
-        position: { top: "50%", left: "17%" }
+        position: { top: "20%", left: "17%" }
     },
     
 
