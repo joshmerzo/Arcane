@@ -70,40 +70,63 @@ nav {
 }
 
 /* Center the navbar links */
-.navbar-menu {
-
+.navbar {
+    font-family: 'Arcane Nine', sans-serif; /* Use your preferred font */
+    width: 75%; /* Control the navbar width */
+    length:10%;
+    padding: 15px 20px; /* Add padding for spacing */
+    position: fixed; /* Keeps the navbar floating */
+    top: 1rem; /* Space from the top of the page */
+    left: 50%; /* Center the navbar horizontally */
+    transform: translateX(-50%); /* Perfect centering */
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
+    justify-content: center; /* Center the navbar menu */
+    align-items: center;
+    background: transparent; /* Semi-transparent black background */
+    border-radius: 25px; /* Rounded corners for a floating look */
+    z-index: 1000; /* Ensure it appears above all other elements */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-.navbar-nav {
-    list-style: none;
+/* Navbar Container */
+.navbar_container {
     display: flex;
-    gap: 15px;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    length: 50%;
+    width: 100%; /* Full width to ensure proper centering */
 }
 
-.nav-item .nav-link {
+/* Navbar Menu */
+.navbar_menu {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center; /* Center links within the navbar */
+    gap: 30px; /* Space between links */
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Links */
+.navbar_links {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White text */
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: 600; /* Slightly bold text */
     text-align: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.25rem;
-    transition: color 0.3s;
+    padding: 8px 15px; /* Add padding around links */
+    border-radius: 10px; /* Add subtle rounded effect */
+    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
-.nav-item .nav-link:hover {
-    color: #ebf5ff;
+.navbar_links:hover {
+    color: rgba(200, 167, 122, 1); /* Highlight text color on hover */
 }
-
-.nav-item .nav-link.active {
-    font-weight: bold;
-    color: #007bff;
-}
-
 
 /* Banner styles */
 .banner {
     width: 100%;
+    min-height:100%;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -259,19 +282,19 @@ nav {
 
 
 .switchSeasonBtn {
-    position: absolute; /* Allows precise placement */
+    position: relative; /* Allows precise placement */
     max-height: 4rem;
-    bottom: 80px; /* Fixed distance from the bottom */
-    right: 20px; /* Fixed distance from the right */
-    max-width: 200px;
-    padding: 10px 20px;
+    bottom: 4em; /* Fixed distance from the bottom */
+    right: 1.2rem; /* Fixed distance from the right */
+    max-width: 10em;
+    padding: 0.5em 1.5em;
     font-size: 1rem;
     font-family: 'Arcane Nine', sans-serif;
     background-color: rgba(200, 167, 122, 0.9);
     border: none;
-    margin-left: 20px;
-    margin-bottom: 10px; /* Add some space between the buttons */
-    border-radius: 5px;
+    margin-left: 1.2rem;
+    margin-bottom: 1em; /* Add some space between the buttons */
+    border-radius: 0.5em;
     color: rgba(0, 0, 0, 0.9);
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -284,7 +307,7 @@ nav {
 .arrowBtns{
     display: flex;
     position: absolute; /* Allows precise placement */
-    bottom: 1.3rem; /* Fixed distance from the bottom */
+    bottom: 1.3em; /* Fixed distance from the bottom */
     right: 1.8rem; /* Fixed distance from the right */
     gap: 1rem;
     opacity: 70%;
@@ -345,13 +368,14 @@ nav {
     position: absolute;
     inset: 0 0 0 0;
     overflow: hidden;
-    opacity: 0;
+    opacity: 0; 
     transition: .5s;
 }
 .slider .list .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 100;
 }
 .slider .list .item::after{
     content: '';
@@ -415,7 +439,6 @@ nav {
 
 .slider .list .item.active p{
     animation-delay: 1s;
-    size: 1rem;
 }
 .slider .list .item.active p:nth-child(3){
     animation-duration: 1.3s;

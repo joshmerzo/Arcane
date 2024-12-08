@@ -1,10 +1,14 @@
 // Select the navbar toggler and menu
 const toggler = document.querySelector('.navbar-toggler');
-const menu = document.querySelector('.navbar-menu');
+const menu = document.querySelector('#mobile-menu')
+const menuLink = document.querySelector('.navbar_menu')
+const navbar = document.querySelector('.navbar'); // Select the navbar container
 
-// Add click event to toggle menu visibility
-toggler.addEventListener('click', () => {
-    menu.classList.toggle('active');
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('is-active');
+    menuLink.classList.toggle('active');
+
 });
 
 // Scroll arrow click event

@@ -12,23 +12,25 @@
 </head>
 <body>
     <!-- Navbar Section -->
-    <nav>
-        <button class="navbar-toggler" aria-label="Toggle navigation">
-            <span class="hamburger"></span>
-        </button>
-        <div class="navbar-menu">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="#Home">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#EpisodeID">Episodes</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#Characters">Characters</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#Regions">Regions</a></li>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item"><a href="#Home"     class="navbar_links">Home</a></li>
+                <li class="navbar_item"><a href="#EpisodeID" class="navbar_links">Episodes</a></li>
+                <li class="navbar_item"><a href="#Characters"   class="navbar_links">Characters</a></li>
+                <li class="navbar_item"><a href="#Regions"  class="navbar_links">Regions</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Banner Section -->
     <div class="banner" id="Home">
-        <div class="center-text">
+        <div class="center-text">   
             <p class="subtitle" id="home-subtitle">Explore the World of</p>
             <h1 class="emphasized-title"  id="home-title">Arcane</h1>
             <div class="center-text">
