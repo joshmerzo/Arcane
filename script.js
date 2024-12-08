@@ -290,6 +290,42 @@ thumbnails.forEach((thumbnail, index) => {
 
 ];
 
+function preloadEpisodeImages(episodes, callback) {
+    let imagesLoaded = 0;
+    const totalImages = episodes.length;
+
+    episodes.forEach(episode => {
+        const img = new Image();
+        img.src = episode.background;
+
+        img.onload = () => {
+            imagesLoaded++;
+            if (imagesLoaded === totalImages) {
+                // All images loaded, call the callback
+                callback();
+            }
+        };
+
+        img.onerror = () => {
+            console.error(`Failed to load image: ${episode.background}`);
+            imagesLoaded++;
+            if (imagesLoaded === totalImages) {
+                callback();
+            }
+        };
+    });
+}
+
+
+preloadEpisodeImages(allEpisodes, () => {
+    console.log("All episode backgrounds are preloaded and ready to use.");
+    initializeEpisodeDisplay();
+});
+
+function initializeEpisodeDisplay() {
+    console.log("Initializing episodes display...");
+}
+
 let currentSeason = 1; 
 let episodes = allEpisodes.filter(e => e.season === currentSeason);
 let currentEpisode = 0;
