@@ -11,6 +11,24 @@ menu.addEventListener('click', function() {
 
 });
 
+const aboutSection = document.getElementById('About');
+const backgrounds = [
+    'pics/bgAbout/2.png',
+    'pics/bgAbout/3.png',
+    'pics/bgAbout/4.jpg',
+    'pics/bgAbout/5.jpg',
+    'pics/bgAbout/6.jpg',
+    'pics/bgAbout/7.png'
+];
+let currentIndex = 0;
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+    aboutSection.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+}
+
+setInterval(changeBackground, 5000);
+
 document.getElementById("scroll-arrow").addEventListener("click", function() {
 
 });
