@@ -189,6 +189,131 @@ nav {
     z-index: 20; /* Higher than the slider's z-index */
 }
 
+/* About CSS */
+
+/* General container styling */
+#About {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden; /* Ensure smooth background transitions */
+}
+
+/* Background layer for #About */
+#About::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(27, 27, 27, 0.75), rgba(0, 0, 0, 0.75));
+    z-index: 0; /* Keep it behind other content */
+    pointer-events: none; /* Allow interaction with content */
+    transition: background 1s ease-in-out; /* Smooth transition for overlay changes */
+}
+
+/* Background image for #About */
+#About {
+    background: url('pics/bgAbout/1.png') no-repeat center center/cover;
+    transition: background 1s ease-in-out; /* Smooth background image transition */
+    z-index: 1; /* Ensure content appears over the background */
+}
+
+/* Main content container */
+.abContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between poster and text */
+    max-width: 1000px;
+    margin: auto;
+    z-index: 2; /* Bring the content above the gradient overlay */
+}
+
+/* Styling for Arcane Poster */
+#ArcanePoster {
+    width: 20vw;
+    height: 65vh;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Box shadow for emphasis */
+    object-fit: cover; /* Ensure the image scales nicely */
+}
+
+/* Text and description container beside the image */
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1; /* Take up remaining space */
+    padding: 10px;
+}
+
+/* Title styling */
+.Title {
+    font-size: 3rem;
+    margin: 0;
+    background: linear-gradient(90deg, #c8a77a, #d1b48b, #e3d4b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Company styling */
+.Company {
+    font-family: 'Gilgan', sans-serif;
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Description styling */
+.plot {
+    font-family: 'Gilgan', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    margin-top: 5rem;
+}
+
+/* Styling for the button */
+.link-button {
+    opacity: 80%;
+    background-color: rgb(215, 183, 0); 
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for button */
+.link-button:hover {
+    opacity: 100%;
+    background-color: gold; 
+}
+
+#netflix{
+    background-color: #ffffff;
+    color: red;
+}
+/* END About CSS */
+
 /* episodeCSS */
 
 .Episode {
@@ -257,12 +382,6 @@ nav {
     max-width: 450px; /* Keep a consistent width */
 }
 
-.episode-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
 /* Button styles */
 .episode-buttons {
     display: flex;
@@ -320,7 +439,7 @@ nav {
     position: absolute; /* Allows precise placement */
     bottom: 1.3em; /* Fixed distance from the bottom */
     right: 1.8rem; /* Fixed distance from the right */
-    gap: 1rem;
+    gap: 1.4rem;
     opacity: 70%;
 }
 
@@ -627,6 +746,46 @@ nav {
     color: #f1faee;
     font-size: 1rem;
     padding: 5px 0;
+}
+
+/* FOOTER CSS */
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: transparent; 
+    padding: 20px 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; /
+}
+
+/* Social Links Container */
+.social-links-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+}
+
+.social-icon {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 24px; 
+    transition: color 0.3s ease; 
+}
+
+.social-icon:hover {
+    color: #e63946;
+}
+
+/* END FOOTER CSS */
+
+@media (max-width: 600px) {
+    .social-icon {
+        font-size: 20px; 
+    }
 }
 
 @keyframes fadeIn {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gilgan" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 <body>
@@ -21,6 +22,7 @@
             </div>
             <ul class="navbar_menu">
                 <li class="navbar_item"><a href="#Home"     class="navbar_links">Home</a></li>
+                <li class="navbar_item"><a href="#About" class="navbar_links">About</a></li>
                 <li class="navbar_item"><a href="#EpisodeID" class="navbar_links">Episodes</a></li>
                 <li class="navbar_item"><a href="#Characters"   class="navbar_links">Characters</a></li>
                 <li class="navbar_item"><a href="#Regions"  class="navbar_links">Regions</a></li>
@@ -39,6 +41,39 @@
         </div>
     </div>
 
+    <!--About Section-->
+    <div class="about" id="About">
+        <div class="abContainer">
+            <img id="ArcanePoster" src="pics/Poster/1.png" alt="Arcane Poster">
+            <div class="textContainer">
+                <h2 class="Title">Arcane: League of Legends</h2>
+                <h2 class="Company"><i>a series by Riot Games</i></h2>
+                <p class="plot">
+                    Based on the world behind League of Legends, Arcane dives into the 
+                    delicate balance between the rich, utopian city of Piltover Crest 
+                    and the seedy, oppressed underground of Zaun Crest. Known across 
+                    Runeterra as the "city of progress," many of the most brilliant 
+                    minds call these cities home. But the creation of hextech, a way 
+                    for any person to control magical energy, threatens that balance. 
+                    The story follows the origins of two iconic League champions—and 
+                    the power that will tear them apart. Like the game on which it is 
+                    based, Arcane is aimed at a "16+" audience and deals with more 
+                    adult subject matter.
+                </p>
+                <div class="button-container">
+                    <a href="https://www.imdb.com/title/tt11126994/?ref_=ttpl_ov" target="_blank">
+                        <button class="link-button" id="imdb">IMDb</button>
+                    </a>
+                    <a href="https://www.netflix.com/title/81435684" target="_blank">
+                        <button class="link-button" id="netflix">Netflix</button>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!--Episodes Section-->
     <div class="Episode" id="EpisodeID">
         <div id="backgroundContainer"></div>
         <h1 class="epHeader" id="epHeader">Episodes</h1>
@@ -57,7 +92,6 @@
                 </div>
             </div>
         </div>
-
         <div id="episodeButtons" class="episode-buttons"></div>
         <button id="switchSeasonBtn" class="switchSeasonBtn">Switch Season</button>
         <div class="arrowBtns">
@@ -66,7 +100,7 @@
         </div>
     </div>
     
-
+    <!--Characters Section-->
     <div class="slider" id="Characters">
         <div class="list">
             <div class="item active">
@@ -220,6 +254,7 @@
         </div>
     </div>
 
+    <!--Regions Section-->    
     <div id="Regions" class="banner">
         <div class="map-container">
             <h1 class="epHeader" id="epHeader">Map</h1>
@@ -245,4 +280,20 @@
 
     <script src="script.js"></script>
 </body>
+<footer class="footer">
+    <div class="social-links-footer">
+    <a href="https://www.facebook.com/arcaneshow" target="_blank" class="social-icon facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com/arcaneshow" target="_blank" class="social-icon twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/arcaneshow/" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://en.wikipedia.org/wiki/Arcane_(TV_series)" target="_blank" class="social-icon wikipedia">
+        <i class="fab fa-wikipedia-w"></i>
+    </a>
+</div>
+</div>
 </html>
