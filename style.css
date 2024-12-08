@@ -263,6 +263,15 @@ nav {
 }
 
 /* Button styles */
+.episode-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem; /* Add spacing above the buttons */
+    bottom: 3rem;
+}
+
+/* Button styles */
 .episode-buttons button {
     justify-content: center;
     background-color: #444;
@@ -280,24 +289,24 @@ nav {
     background-color: #666;
 }
 
-
 .switchSeasonBtn {
-    position: relative; /* Allows precise placement */
-    max-height: 4rem;
-    bottom: 4em; /* Fixed distance from the bottom */
-    right: 1.2rem; /* Fixed distance from the right */
-    max-width: 10em;
+    position: absolute; /* Use fixed for better responsiveness */
+    bottom: 5rem; /* Adjust to ensure it's below the episode buttons */
+    right: 2rem; /* Distance from the right */
+    max-width: 8em;
     padding: 0.5em 1.5em;
     font-size: 1rem;
     font-family: 'Arcane Nine', sans-serif;
     background-color: rgba(200, 167, 122, 0.9);
     border: none;
-    margin-left: 1.2rem;
-    margin-bottom: 1em; /* Add some space between the buttons */
     border-radius: 0.5em;
     color: rgba(0, 0, 0, 0.9);
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.switchSeasonBtn:hover {
+    background-color: rgba(209, 180, 139, 1);
 }
 
 .switchSeasonBtn:hover {
