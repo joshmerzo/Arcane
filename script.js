@@ -308,10 +308,18 @@ function updateEpisodeUI(episodeData) {
             epDescriptionElement.style.opacity = 1;
 
             const epTnD = document.querySelector(".epTnD");
-            epTnD.style.position = "absolute";
+            if (window.matchMedia("(max-width: 480px)").matches) {
+                // Fixed position for small screens
+                epTnD.style.position = "absolute";
+                epTnD.style.top = "40%";
+                epTnD.style.left = "5%";
+            } else {
+                // Default position from episodeData
+                epTnD.style.position = "absolute";
 
-            if (episodeData.position.top) epTnD.style.top = episodeData.position.top;
-            if (episodeData.position.left) epTnD.style.left = episodeData.position.left;
+                if (episodeData.position.top) epTnD.style.top = episodeData.position.top;
+                if (episodeData.position.left) epTnD.style.left = episodeData.position.left;
+            }
         }, 100); 
     }, 500); 
 
