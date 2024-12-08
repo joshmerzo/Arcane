@@ -9,7 +9,7 @@
 <p><strong>Interactive Elements:</strong></p>
 <li>Episode navigation with descriptions and background changes.</li>
 <li>Character slider showcasing images and descriptions of main characters.</li>
-<li>Interactive map of Runeterra with clickable regions providing detailed information on key locations and characters.</li>
+<li>Interactive map of Runeterra with clickable regions providing detailed information on key locations and characters.</li><br>
 <p><strong>Smooth Transitions:</strong> Animations and transitions provide a smooth user experience as elements fade in and out or scroll smoothly between sections.</p> 
 <p><strong>External Links: </strong>Includes buttons that link to IMDb and Netflix pages for further exploration of the series.
 Files</p> 
@@ -22,7 +22,5 @@ Files</p>
 <p><strong>To run the website locally:</strong></p>
 
 <li>Clone the repository.</li>
-<li>Open index.html in your preferred browser.</li>
-
-
+<li>Open index.html in your preferred browser.</li><br>
 <p><i>This website was designed to be an immersive introduction to Arcane's world, giving users a seamless way to explore the story and its characters.</i></p>
