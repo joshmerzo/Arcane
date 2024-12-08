@@ -22,12 +22,26 @@ const backgrounds = [
 ];
 let currentIndex = 0;
 
-function changeBackground() {
-    currentIndex = (currentIndex + 1) % backgrounds.length;
-    aboutSection.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+const preloadedImages = [];
+
+function preloadImages(urls) {
+    urls.forEach((url) => {
+        const img = new Image(); 
+        img.src = url;          
+        preloadedImages.push(img); 
+    });
 }
 
-setInterval(changeBackground, 5000);
+preloadImages(backgrounds);
+
+function changeBackground() {
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+    aboutSection.style.backgroundImage = `url('${preloadedImages[currentIndex].src}')`;
+}
+
+setTimeout(() => {
+    setInterval(changeBackground, 5000);
+}, 1000); 
 
 document.getElementById("scroll-arrow").addEventListener("click", function() {
 
