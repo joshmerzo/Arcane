@@ -13,12 +13,60 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: red solid 1px;
 }
 
 body {
     background-color: rgb(0, 0, 0);
     font-family: 'Arcane Nine', sans-serif;
+}
+
+nav {
+    font-family: 'Arcane Nine', sans-serif;
+    width: 75%; /* Set width */
+    padding: 1.5rem 2rem; /* Increase top/bottom padding */
+    position: fixed; /* Keep it at the top */
+    top: 1rem; /* Add some space from the top */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Ensure transparent background */
+    z-index: 1000; /* Ensure it appears above the banner */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it stays above the navbar links */
+}
+
+.hamburger {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
 }
 
 /* Center the navbar links */
@@ -171,7 +219,7 @@ body {
     flex-direction: column;
     justify-content: space-between; /* Ensures elements are spaced appropriately */
     padding: 5vw 0; /* Adds spacing around the edges */
-    margin-bottom: -1rem;
+    margin-bottom: -50px;
 }
 
 .epTnD {
@@ -297,7 +345,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: 
         radial-gradient(circle at 60% 40%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 100%),
         url('epImg/ep/1.png');
@@ -475,37 +523,47 @@ body {
     }
 }
 
-.map-container {
-    position: relative;
-    text-align: center;
-}
-
 .map-border {
     position: relative;
+    width: 100%; /* Make it responsive */
+    max-width: 800px;
+    aspect-ratio: 16 / 9; /* Keeps the aspect ratio */
     border: 4px solid #444;
     border-radius: 10px;
-    width: 800px;
-    height: 490px;
     overflow: hidden;
     background-color: #f4f4f4;
 }
 
 .map-image {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
+    width: 100%; /* Scale image with parent */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .interactive-circle {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 2.5%; /* Size relative to map size */
+    height: 2.5%; /* Size relative to map size */
     background-color: rgba(159, 111, 0, 0.679);
     border: 2px solid white;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+.interactive-circle:hover {
+    transform: scale(1.3);
+    background-color: rgba(159, 111, 0, 0.9);
+}
+
+
+/* Adjust for Small Screens */
+@media (max-width: 511px) {
+    .interactive-circle {
+        width: 15px; /* Scale down circle size */
+        height: 15px;
+    }
+}
+
 
 .interactive-circle:hover {
     transform: scale(1.3);
@@ -522,7 +580,7 @@ body {
     border-radius: 8px;
     color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    width: 20rem;
     text-align: center;
     z-index: 999;
     display: flex;

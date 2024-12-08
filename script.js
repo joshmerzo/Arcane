@@ -385,6 +385,7 @@ const circles = document.querySelectorAll('.interactive-circle');
 const regionInfo = document.getElementById('regionInfo');
 const regionTitle = document.getElementById('regionTitle');
 const regionDescription = document.getElementById('regionDescription');
+const regionCharacters = document.getElementById('regionCharacters'); // Missing in the original code
 
 // Region data for each area
 const regionData = {
@@ -399,14 +400,14 @@ const regionData = {
         title: 'Zaun',
         description: 'Zaun is depicted as a place of invention and struggle, where the poor and downtrodden live amidst dangerous chemicals and oppressive corporations. The region is dominated by underground gangs and brilliant yet often morally gray inventors. ',
         characters: [
-            'Jinx ', ' Vi ', ' Viktor', ' Silco', ' Vander', ' Singed'
+            'Jinx', ' Vi', ' Viktor', ' Silco', ' Vander', ' Singed'
         ],
     },
     'Piltover': {
         title: 'Piltover',
         description: 'Piltover is portrayed as a center for progress, prosperity, and scientific advancement. The city’s shining towers and sophisticated society mask its political intrigue and growing tension with Zaun. Piltover is home to ambitious figures like Jayce, Caitlyn, and Heimerdinger, who strive for peace and progress, though often at the cost of others.',
         characters: [
-            'Caitlyn ', ' Jayce ', ' Heimerdinger', 
+            'Caitlyn', ' Jayce', ' Heimerdinger', 
         ],
     }
 };
@@ -418,6 +419,7 @@ function showRegionInfo(region) {
     regionDescription.textContent = data.description;
     regionCharacters.textContent = data.characters;
 
+ 
     // Show the region info section
     regionInfo.classList.remove('hidden');
 }

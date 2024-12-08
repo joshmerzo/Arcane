@@ -309,7 +309,7 @@
 
     .navbar-menu.show {
         display: flex; /* Show the navbar when toggled */
-    }
+    }   
 }
 
 @media screen and (max-width: 678px) {
@@ -361,21 +361,6 @@
     }
 
     /* Map container and elements */
-    .map-container {
-        width: 100%;
-        padding: 10px; /* Add some padding */
-    }
-
-    .map-border {
-        width: 100%;
-        height: 300px; /* Reduce the size for smaller screens */
-    }
-
-    .interactive-circle {
-        width: 15px; /* Smaller circle size */
-        height: 15px;
-    }
-
     .region-info {
         width: 80%; /* Make the region info box more responsive */
         max-height: 300px; /* Adjust max height for better readability */
@@ -481,5 +466,76 @@
         font-size: 0.8rem;
         padding: 0.3em 0.6em;
 
+    }
+}
+
+@media (max-width: 511px) {
+    .map-container {
+        height: auto; /* Allow the container to scale based on content */
+        width: 100%;  /* Ensure the container takes full width */
+        padding: 0 10px; /* Optional: adds padding to the sides for better responsiveness */
+        overflow: hidden; /* Prevent content overflow */
+    }
+
+    .map-border {
+        width: 100%; /* Make the map border take full width of the container */
+        height: 200px; /* Adjust height for smaller screens */
+        border: 2px solid #444; /* Keep the border but adjust thickness if needed */
+        position: relative; /* Ensure proper positioning of circles inside */
+    }
+
+    .map-image {
+        width: 100%; /* Ensure the map image scales to the container */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .region-info {
+        width: 80%; /* Smaller width for smaller screens */
+        padding: 15px; /* Adjust padding */
+        max-height: 300px; /* Adjust height */
+    }
+
+    .region-info h3 {
+        font-size: 1.4rem; /* Smaller title */
+    }
+
+    .region-info p {
+        font-size: 0.85rem; /* Adjust paragraph size */
+    }
+
+    .region-info h4 {
+        font-size: 1rem;
+    }
+
+    .region-info ul li {
+        font-size: 0.85rem; /* Adjust list item font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .region-info {
+        width: 50%; /* Almost full screen */
+        padding: 10px; /* Minimal padding */
+        max-height: 150px; /* Further height reduction */
+    }
+
+    .region-info h3 {
+        font-size: 0.9rem; /* Further reduce title size */
+    }
+
+    .region-info p {
+        font-size: 0.5rem; /* Adjust paragraph size */
+    }
+
+    .region-info h4 {
+        font-size: 0.3rem;
+    }
+
+    .region-info ul {
+        font-size: 0.5rem; /* Adjust list item font size */
     }
 }
