@@ -1,61 +1,60 @@
-/* Responsive styles */
 @media screen and (max-width: 1024px) {
     .banner {
-        padding-top: 100px; /* Adjust padding */
+        padding-top: 100px; 
     }
 
     .subtitle {
-        font-size: 1.8rem; /* Adjust font size */
+        font-size: 1.8rem;
     }
 
     .emphasized-title {
-        font-size: 10rem; /* Adjust font size */
+        font-size: 10rem;
     }
 
     .scroll-down-arrow {
-        font-size: 1.8rem; /* Adjust font size */
+        font-size: 1.8rem; 
     }
 
     .characterHeader {
-        font-size: 4rem; /* Adjust font size */
-        left: 300px; /* Adjust position */
+        font-size: 4rem; 
+        left: 300px; 
     }
 
     .epHeader {
-        font-size: 3.5rem; /* Adjust font size */
+        font-size: 3.5rem; 
     }
 
     .epTnD {
-        bottom: 130px; /* Adjust position */
-        left: 60px; /* Adjust position */
+        bottom: 130px; 
+        left: 60px; 
     }
 
     .ep {
-        font-size: 1.2rem; /* Adjust font size */
+        font-size: 1.2rem; 
     }
 
     .epTitle {
-        font-size: 1.8rem; /* Adjust font size */
+        font-size: 1.8rem; 
     }
 
     .epDescription {
-        font-size: 1rem; /* Adjust font size */
+        font-size: 1rem; 
     }
 
     .arrowBtns {
-        bottom: 1rem; /* Adjust position */
+        bottom: 1rem; 
     }
 
     .arrowBtn {
-        font-size: 1rem; /* Adjust font size */
+        font-size: 1rem; 
     }
 }
 
 
 @media screen and (max-width: 960px){
     .navbar {
-        border: none; /* Removes the border */
-        box-shadow: none; /* Removes the box shadow */
+        border: none; 
+        box-shadow: none; 
     }
     .navbar_container{
         display: flex;
@@ -75,21 +74,21 @@
         margin: 0;
         width: 50%;
         height: auto;
-        display: none; /* Hidden by default */
-        flex-direction: column; /* Stack items vertically */
+        display: none; 
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
-        border-radius: 15px; /* Curved corners */
-        background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-        border: 2px solid rgba(255, 255, 255, 0.7); /* White border with transparency */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7); /* Highlighted shadow */
+        border-radius: 15px; 
+        background: rgba(0, 0, 0, 0.7); 
+        border: 2px solid rgba(255, 255, 255, 0.7); 
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7); 
         padding: 10px;
         z-index: 99;    
 
     }
     
     .navbar_menu.active {
-        display: flex; /* Make it visible */
+        display: flex; 
     }
 
     .navbar_toggle .bar{
@@ -136,66 +135,63 @@
     }
 }
 
-/* For small screen devices (phones) */
 @media screen and (max-width: 768px) {
 
-    /* Banner styling */
+
     .banner {
-        padding-top: 50px; /* Adjust padding for mobile */
+        padding-top: 50px; 
     }
 
     .subtitle {
-        font-size: 4vw; /* Smaller font size */
+        font-size: 4vw;
         margin-bottom: 0.5rem;
     }
 
     .emphasized-title {
-        font-size: 12vw; /* Adjust title size */
+        font-size: 12vw; 
     }
 
     .scroll-down-arrow {
-        font-size: 1.5rem; /* Adjust arrow size */
+        font-size: 1.5rem; 
         margin-top: 1rem;
     }
 
-    /* Character Header */
     .characterHeader {
-        font-size: 4rem; /* Adjust character header size */
-        left: 5vw; /* Adjust position */
+        font-size: 4rem; 
+        left: 5vw; 
         top: 10vh;
     }
 
-    /* Episode Styles */
     .Episode {
-        height: auto; /* Let height adjust automatically */
-        padding: 10px; /* Adjust padding */
+        height: auto; 
+        padding: 10px; 
     }
 
     .epHeader {
-        font-size: 3.5rem; /* Adjust episode header size */
+        font-size: 3.5rem; 
     }
 
     .epContainer {
-        padding: 5vw 5vw; /* Adjust padding */
+        padding: 5vw 5vw;
     }
 
     .epTnD {
         left: 5vw;
-        bottom: 15vh; /* Adjust position */
-        max-width: 70vw; /* Adjust width */
+        bottom: 15vh; 
+        max-width: 70vw; 
     }
 
     .ep {
-        font-size: 1.2rem; /* Adjust text size */
+        font-size: 1.2rem; 
     }
 
     .epTitle {
-        font-size: 1.8rem; /* Adjust title size */
+        font-size: 1.8rem; 
     }
 
     .epDescription {
-        font-size: 0.9rem; /* Adjust description font size */
-        max-width: 90%; /* Make description more responsive */
+        font-size: 0.9rem; 
+        max-width: 90%; 
     }
 
     .arrowBtns {
@@ -203,13 +199,13 @@
     }
 
     .arrowBtn {
-        font-size: 0.9rem; /* Adjust arrow button size */
-        padding: 0.5rem 1rem; /* Adjust padding */
+        font-size: 0.9rem; 
+        padding: 0.5rem 1rem; 
     }
 
     #backgroundContainer {
         background-image: url('epImg/ep/1.png');
-        background-position: top center; /* Adjust background positioning */
+        background-position: top center; 
         background-size: cover;
     }
 
@@ -218,7 +214,7 @@
     }
     #About {
         padding: 20px;
-        overflow: hidden; /* Ensure smooth background transitions */
+        overflow: hidden; 
     }
 
     .abContainer {
@@ -234,7 +230,7 @@
 
     .textContainer {
         justify-content: space-around;
-        flex: 1; /* Take up remaining space */
+        flex: 1; 
         padding: 5px;
     }
 
@@ -254,81 +250,80 @@
 
 @media screen and (max-width: 768px) {
     .banner {
-        padding-top: 80px; /* Adjust for the navbar on smaller screens */
+        padding-top: 80px; 
     }
 
     .subtitle {
-        font-size: 1.5rem; /* Smaller font size for subtitle */
+        font-size: 1.5rem; 
     }
 
     .emphasized-title {
-        font-size: 8rem; /* Reduce font size for title */
+        font-size: 8rem; 
     }
 
     .scroll-down-arrow {
-        font-size: 1.5rem; /* Adjust arrow size */
-        margin-top: 15px; /* Adjust spacing */
+        font-size: 1.5rem; 
+        margin-top: 15px;
     }
     
     .characterHeader {
-        font-size: 3rem; /* Reduce font size for character header */
-        left: 20px; /* Adjust position */
-        top: 70px; /* Adjust position */
+        font-size: 3rem; 
+        left: 20px; 
+        top: 70px;
     }
     
-    /* EPISODES MEDIA QUERIES */
     .epHeader {
-        font-size: 3rem; /* Smaller font size for episode header */
+        font-size: 3rem; 
     }
 
     .epTnD {
-        bottom: 120px; /* Adjust positioning */
-        left: 40px; /* Adjust positioning */
+        bottom: 120px; 
+        left: 40px; 
     }
 
     .ep {
-        font-size: 1rem; /* Adjust font size */
+        font-size: 1rem; 
     }
 
     .epTitle {
-        font-size: 1.5rem; /* Adjust font size */
+        font-size: 1.5rem; 
     }
 
     .epDescription {
-        font-size: 0.9rem; /* Adjust font size */
+        font-size: 0.9rem; 
     }
 
     .arrowBtns {
-        bottom: 1rem; /* Adjust position */
+        bottom: 1rem;
         gap: 15px;
     }
 
     .arrowBtn {
-        font-size: 0.9rem; /* Adjust font size */
-        padding: 8px 20px; /* Adjust padding */
+        font-size: 0.9rem; 
+        padding: 8px 20px;
     }
 
     .slider .list .item .content {
-        width: 80%; /* Adjust width */
+        width: 80%; 
     }
 }
 
 @media (max-width: 768px) {
     .episode-buttons {
-        flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+        flex-wrap: wrap; 
         gap: 0.5rem;
         margin-top: 1rem;
     }
 
     .episode-buttons button {
-        padding: 0.5rem 1rem; /* Adjust padding */
-        font-size: 0.9rem; /* Reduce font size */
+        padding: 0.5rem 1rem; 
+        font-size: 0.9rem; 
 
     }
 
     .switchSeasonBtn {
-        bottom: 8rem; /* Adjust spacing for smaller screens */
-        left: 2rem; /* Adjust position for smaller screens */
+        bottom: 8rem; 
+        left: 2rem;
         font-size: 0.9rem;
         padding: 0.4em 1em;
     }
@@ -345,7 +340,7 @@
     }
 
     .navbar-menu.show {
-        display: flex; /* Show the navbar when toggled */
+        display: flex; 
     }   
 }
 
@@ -362,120 +357,115 @@
 }
 
 @media screen and (max-width: 678px) {
-    /* Slider adjustments */
 
     .slider .list .item .content h2 {
-        font-size: 40px; /* Smaller font size for the title */
-        max-width: 90%; /* Ensure the content doesn't overflow */
-        left: 5%; /* Adjust the position */
-        top: 15%; /* Adjust the top position */
+        font-size: 40px;
+        max-width: 90%; 
+        left: 5%; 
+        top: 15%; 
     }
 
     .slider .list .item .content p:nth-child(1) {
-        font-size: 12px; /* Reduce text size */
-        letter-spacing: 2px; /* Adjust letter spacing */
+        font-size: 12px; 
+        letter-spacing: 2px; 
     }
 
     .thumbnail {
-        flex-wrap: nowrap; /* Ensure thumbnails don't wrap */
-        overflow-x: auto; /* Allow horizontal scrolling */
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
     }
 
     .thumbnail .item {
-        width: 120px; /* Reduce size of thumbnail items */
+        width: 120px; 
         height: 180px;
     }
 
-    /* Arrows */
     .arrows {
-        top: 10%; /* Adjust arrows to be more accessible */
-        right: 10px; /* Align arrows to the right */
+        top: 10%; 
+        right: 10px; 
     }
 
     .arrows button {
-        width: 35px; /* Smaller arrow buttons */
+        width: 35px;
         height: 35px;
     }
 
-    /* Map container and elements */
     .region-info {
-        width: 80%; /* Make the region info box more responsive */
-        max-height: 300px; /* Adjust max height for better readability */
+        width: 80%;
+        max-height: 300px; 
     }
 
     .region-info h3 {
-        font-size: 1.4rem; /* Reduce title size */
+        font-size: 1.4rem; 
     }
 
     .region-info p,
     .region-info ul li {
-        font-size: 0.9rem; /* Reduce text size for better readability */
+        font-size: 0.9rem; 
     }
 
     .region-info ul {
-        text-align: left; /* Align list to the left */
+        text-align: left; 
     }
 }
 
-/* For extra small devices (phones in portrait mode) */
 @media screen and (max-width: 480px) {
 
     .banner {
-        padding-top: 40px; /* Further reduce padding */
+        padding-top: 40px; 
             }
 
     .subtitle {
-        font-size: 5vw; /* Reduce subtitle font size */
+        font-size: 5vw; 
     }
 
     .emphasized-title {
-        font-size: 14vw; /* Reduce emphasized title size */
+        font-size: 14vw; 
     }
 
     .scroll-down-arrow {
-        font-size: 1.2rem; /* Adjust arrow size */
+        font-size: 1.2rem;
         margin-top: 1rem;
     }
 
     .characterHeader {
-        font-size: 3rem; /* Adjust character header font size */
-        left: 3vw; /* Adjust left position */
+        font-size: 3rem;
+        left: 3vw;
         top: 12vh;
     }
 
     .Episode {
-        height: auto; /* Let height adjust automatically */
+        height: auto; 
         padding: 5px;
-        position: relative; /* Ensure child elements align relative to this container */
+        position: relative; 
     }
 
     .epHeader {
-        font-size: 3rem; /* Adjust episode header size */
+        font-size: 3rem; 
     }
 
     .epContainer {
-        padding: 5vw 5vw; /* Adjust padding */
+        padding: 5vw 5vw; 
     }
 
     .epTnD {
-        left: 3vw; /* Adjust positioning */
-        bottom: 12vh; /* Adjust bottom distance */
-        max-width: 75vw; /* Adjust max width */
+        left: 3vw; 
+        bottom: 12vh; 
+        max-width: 75vw; 
     }
 
     .ep {
-        font-size: 1rem; /* Smaller text size */
+        font-size: 1rem; 
     }
 
     .epTitle {
-        font-size: 1.6rem; /* Smaller title size */
+        font-size: 1.6rem; 
     }
 
     .epDescription {
-        font-size: 0.85rem; /* Smaller description size */
-        max-width: 90%; /* Adjust width */
+        font-size: 0.85rem; 
+        max-width: 90%; 
     }
-
     .arrowBtns {
         display: none;
     }
@@ -483,15 +473,15 @@
 
     #backgroundContainer {
         background-image: url('epImg/ep/1.png');
-        background-position: top center; /* Adjust background positioning */
+        background-position: top center; 
         background-size: cover;
     }
 }
 
 @media (max-width: 480px) {
     .episode-buttons button {
-        display: flex; /* Align buttons dynamically */
-        justify-content: center; /* Center-align buttons */
+        display: flex; 
+        justify-content: center; 
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
                 margin-bottom: 3em;
@@ -508,22 +498,22 @@
 
 @media (max-width: 511px) {
     .map-container {
-        height: auto; /* Allow the container to scale based on content */
-        width: 100%;  /* Ensure the container takes full width */
-        padding: 0 10px; /* Optional: adds padding to the sides for better responsiveness */
-        overflow: hidden; /* Prevent content overflow */
+        height: auto; 
+        width: 100%;  
+        padding: 0 10px; 
+        overflow: hidden; 
     }
 
     .map-border {
-        width: 100%; /* Make the map border take full width of the container */
-        height: 200px; /* Adjust height for smaller screens */
-        border: 2px solid #444; /* Keep the border but adjust thickness if needed */
-        position: relative; /* Ensure proper positioning of circles inside */
+        width: 100%; 
+        height: 200px; 
+        border: 2px solid #444; 
+        position: relative;
     }
 
     .map-image {
-        width: 100%; /* Ensure the map image scales to the container */
-        height: auto; /* Maintain the aspect ratio */
+        width: 100%; 
+        height: auto; 
     }
 
 
@@ -531,17 +521,17 @@
 
 @media (max-width: 768px) {
     .region-info {
-        width: 80%; /* Smaller width for smaller screens */
-        padding: 15px; /* Adjust padding */
-        max-height: 300px; /* Adjust height */
+        width: 80%; 
+        padding: 15px; 
+        max-height: 300px; 
     }
 
     .region-info h3 {
-        font-size: 1.4rem; /* Smaller title */
+        font-size: 1.4rem; 
     }
 
     .region-info p {
-        font-size: 0.85rem; /* Adjust paragraph size */
+        font-size: 0.85rem;
     }
 
     .region-info h4 {
@@ -549,23 +539,23 @@
     }
 
     .region-info ul li {
-        font-size: 0.85rem; /* Adjust list item font size */
+        font-size: 0.85rem; 
     }
 }
 
 @media (max-width: 480px) {
     .region-info {
-        width: 50%; /* Almost full screen */
-        padding: 10px; /* Minimal padding */
-        max-height: 150px; /* Further height reduction */
+        width: 50%; 
+        padding: 10px; 
+        max-height: 150px; 
     }
 
     .region-info h3 {
-        font-size: 0.9rem; /* Further reduce title size */
+        font-size: 0.9rem; 
     }
 
     .region-info p {
-        font-size: 0.5rem; /* Adjust paragraph size */
+        font-size: 0.5rem; 
     }
 
     .region-info h4 {
@@ -573,6 +563,13 @@
     }
 
     .region-info ul {
-        font-size: 0.5rem; /* Adjust list item font size */
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 511px) {
+    .interactive-circle {
+        width: 15px; 
+        height: 15px;
     }
 }

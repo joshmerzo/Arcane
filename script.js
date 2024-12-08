@@ -1,8 +1,8 @@
-// Select the navbar toggler and menu
+
 const toggler = document.querySelector('.navbar-toggler');
 const menu = document.querySelector('#mobile-menu')
 const menuLink = document.querySelector('.navbar_menu')
-const navbar = document.querySelector('.navbar'); // Select the navbar container
+const navbar = document.querySelector('.navbar'); 
 
 
 menu.addEventListener('click', function() {
@@ -11,7 +11,6 @@ menu.addEventListener('click', function() {
 
 });
 
-// Scroll arrow click event
 document.getElementById("scroll-arrow").addEventListener("click", function() {
 
 });
@@ -21,10 +20,8 @@ let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-// config param
 let countItem = items.length;
 let itemActive = 0;
-// event next click
 next.onclick = function(){
     itemActive = itemActive + 1;
     if(itemActive >= countItem){
@@ -32,7 +29,6 @@ next.onclick = function(){
     }
     showSlider();
 }
-//event prev click
 prev.onclick = function(){
     itemActive = itemActive - 1;
     if(itemActive < 0){
@@ -40,23 +36,19 @@ prev.onclick = function(){
     }
     showSlider();
 }
-// auto run slider
 let refreshInterval = setInterval(() => {
     next.click();
 }, 5000)
 function showSlider(){
-    // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
     itemActiveOld.classList.remove('active');
     thumbnailActiveOld.classList.remove('active');
 
-    // active new item
     items[itemActive].classList.add('active');
     thumbnails[itemActive].classList.add('active');
     setPositionThumbnail();
 
-    // clear auto time run slider
     clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
         next.click();
@@ -68,14 +60,12 @@ function setPositionThumbnail () {
 
 }
 
-// click thumbnail
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
         showSlider();
     })
 })
-  // Episodes jscript
 
 
   const allEpisodes = [
@@ -245,23 +235,23 @@ thumbnails.forEach((thumbnail, index) => {
 
 ];
 
-let currentSeason = 1; // Default season
-let episodes = allEpisodes.filter(e => e.season === currentSeason); // Filter by season
+let currentSeason = 1; 
+let episodes = allEpisodes.filter(e => e.season === currentSeason);
 let currentEpisode = 0;
 
 function createEpisodeNavigationButtons() {
     const buttonContainer = document.getElementById("episodeButtons");
-    buttonContainer.innerHTML = ""; // Clear previous buttons
+    buttonContainer.innerHTML = ""; 
 
     episodes.forEach((episode, index) => {
         const button = document.createElement("button");
-        button.textContent = index + 1; // Display episode number (1-9)
+        button.textContent = index + 1; 
         button.classList.add('navButton');
         
         button.addEventListener("click", () => {
-            currentEpisode = index; // Set the current episode to the clicked button index
-            updateEpisodeUI(episode); // Update the content with the clicked episode
-            updateBackground(episode); // Update the background for the clicked episode
+            currentEpisode = index; 
+            updateEpisodeUI(episode);
+            updateBackground(episode); 
         });
         
         buttonContainer.appendChild(button);
@@ -281,42 +271,33 @@ initializeEpisodeNavigation();
 function updateBackground(episodeData) {
     const episodeElement = document.getElementById("backgroundContainer");
 
-    // Start fade-out
     episodeElement.style.opacity = 0;
 
-    // After fade-out transition, update the background and fade back in
     setTimeout(() => {
         episodeElement.style.backgroundImage = `${episodeData.gradient}, url('${episodeData.background}')`;
 
-        // Fade back in
         episodeElement.style.opacity = 1;
-    }, 500); // Matches the transition duration in CSS
+    }, 500); 
 }
 
 function updateEpisodeUI(episodeData) {
-    // Select the elements
     const epElement = document.getElementById("ep");
     const epTitleElement = document.getElementById("epTitle");
     const epDescriptionElement = document.getElementById("epDescription");
 
-    // Start fade-out
     epElement.style.opacity = 0;
     epTitleElement.style.opacity = 0;
     epDescriptionElement.style.opacity = 0;
 
-    // After fade-out, update the content and fade back in
     setTimeout(() => {
-        // Hide the elements during content update
         epElement.style.visibility = "hidden";
         epTitleElement.style.visibility = "hidden";
         epDescriptionElement.style.visibility = "hidden";
 
-        // Update the content
         epElement.textContent = episodeData.ep;
         epTitleElement.textContent = episodeData.title;
         epDescriptionElement.textContent = episodeData.description;
 
-        // Make the elements visible and fade them back in
         setTimeout(() => {
             epElement.style.visibility = "visible";
             epTitleElement.style.visibility = "visible";
@@ -331,23 +312,21 @@ function updateEpisodeUI(episodeData) {
 
             if (episodeData.position.top) epTnD.style.top = episodeData.position.top;
             if (episodeData.position.left) epTnD.style.left = episodeData.position.left;
-        }, 100); // Delay slightly after updating content to avoid "flash"
-    }, 500); // Matches the fade-out duration
+        }, 100); 
+    }, 500); 
 
     
 }
 
 
-// Switch Season Button
 document.getElementById("switchSeasonBtn").addEventListener("click", () => {
-    currentSeason = currentSeason === 1 ? 2 : 1; // Toggle between seasons
-    episodes = allEpisodes.filter(e => e.season === currentSeason); // Filter episodes
-    currentEpisode = 0; // Reset to the first episode
+    currentSeason = currentSeason === 1 ? 2 : 1; 
+    episodes = allEpisodes.filter(e => e.season === currentSeason); 
+    currentEpisode = 0; 
 
     initializeEpisodeNavigation();
 });
 
-// Next Episode Button
 document.getElementById("nextEpisodeBtn").addEventListener("click", () => {
     currentEpisode = (currentEpisode + 1) % episodes.length;
 
@@ -356,7 +335,6 @@ document.getElementById("nextEpisodeBtn").addEventListener("click", () => {
     updateBackground(episodeData);
 });
 
-// Previous Episode Button
 document.getElementById("prevEpisodeBtn").addEventListener("click", () => {
     
     currentEpisode = (currentEpisode - 1) % episodes.length;
@@ -368,20 +346,16 @@ document.getElementById("prevEpisodeBtn").addEventListener("click", () => {
     updateBackground(episodeData);
 });
 
-// End episodes
 
   
 
-// Get all interactive circles
 const circles = document.querySelectorAll('.interactive-circle');
 
-// Get the region info section
 const regionInfo = document.getElementById('regionInfo');
 const regionTitle = document.getElementById('regionTitle');
 const regionDescription = document.getElementById('regionDescription');
-const regionCharacters = document.getElementById('regionCharacters'); // Missing in the original code
+const regionCharacters = document.getElementById('regionCharacters');
 
-// Region data for each area
 const regionData = {
     'Noxus': {
         title: 'Noxus',
@@ -406,7 +380,6 @@ const regionData = {
     }
 };
 
-// Show region info when circle is clicked
 function showRegionInfo(region) {
     const data = regionData[region];
     regionTitle.textContent = data.title;
@@ -414,11 +387,9 @@ function showRegionInfo(region) {
     regionCharacters.textContent = data.characters;
 
  
-    // Show the region info section
     regionInfo.classList.remove('hidden');
 }
 
-// Add click event listeners to all circles
 circles.forEach(circle => {
     circle.addEventListener('click', function() {
         const region = circle.getAttribute('data-region');
@@ -426,7 +397,6 @@ circles.forEach(circle => {
     });
 });
 
-// Close region info if clicked outside
 document.addEventListener('click', function(event) {
     if (!event.target.closest('.interactive-circle') && !event.target.closest('#regionInfo')) {
         regionInfo.classList.add('hidden');
